@@ -1,0 +1,50 @@
+#Fatiamento de str:
+
+frase = '   AqUi perDemo!    '
+word = 'aqui * perdemo muito !'
+lista = ['Aqui', 'perdemo']
+
+print(frase[2]) #Mostra a str de posição 2 da str, análogo a listas
+
+print(frase[: 4]) #O uso de [m: n] mostra as str de posição m até n-1, análogo a lista 
+
+print(frase[0: 8: 2]) #Adicionamos o passo
+
+print(len(frase)) #Mostra a quantidade de str
+
+print(frase.count('e')) # Conta quantas vezes a str '*' aparece
+
+#Podemos indicar de onde até onde usaremos o 'count':
+print(frase.count('e', 0, 14))
+
+#Podemos encontrar uma parte específica da frase usando 'find':
+print(frase.find('perDe')) #Note que 'perDe' começa na str de posição 5, por exemplo
+print(frase.find('ganhamo')) #Note que 'ganhamo' não está em 'frase', portanto, o método 'find' retorna -1
+
+#Para verificar se uma str 's' está na frase, basta usar: 's' in frase. Se retornar True, 's' está na frase, caso contrário, False:
+print('perDemo' in frase)
+print('ganhamo' in frase)
+
+#O método 'replace' troca uma str por outra no texto:
+print(frase.replace('perDemo', 'ganhamo'))
+
+#'upper()' coloca todas as str em caixa alta e 'lower()' coloca todas as str em caixa baixa:
+print(frase.upper())
+print(frase.lower())
+
+#'capitalize()' coloca a primeira letra do texto em caixa alta e as restantes em caixa baixa (caso a str começe com espaço, o método não fará nada):
+print(frase.capitalize())
+
+#'title()' transforma o texto em título, ou seja, a primeira letra de cada frase fica em caixa alta e as restantes, em caixa baixa:
+print(frase.title())
+
+#'strp()' remove os espaços em branco antes do texto e depois do texto:
+print(frase.strip())
+
+#'split()' cria uma lista em que cada elemento desta são as palavras usadas na frase.
+print(word.split()) #Se não há arguementos, o critério para escolher os elementos da lista é o espaço
+print(word.split('*')) #Agora o argumento é '*', então, o novo critério é: Os textos que estiverem antes e depois de * serão separados na lista
+
+#'join()' recebe uma lista de str e une as str em um texto. Se você quiser que o separador de palavras da frase de saída seja tapioca, use: 'tapioca'.join(lista)
+print('**'.join(lista)) #Nesse caso, o separador é **
+print(' '.join(lista)) #Nesse caso, o separador é o espaço
