@@ -1,0 +1,40 @@
+#Formatação:
+#ex.1:
+m = int(input("Enter a number: "))
+n = int(input("Enter a number: "))
+add = m + n
+print("The sum of {} and {} equals {}".format(m, n, add))
+
+#ex.2:
+n = int(input("Enter a number:"))
+a = n - 1
+s = n + 1
+print("The antecessor of {} is {} and your sucessor is {}".format(n, a, s))
+
+#ex.3: Converta reais em dolares:
+coin = float(input("Put your money: "))
+convert = coin/5.78
+print("You have U${:.2f}".format(convert)) #Use ':.df' para truncar o output em d casas decimais.
+
+
+#Módulos:
+
+#ex.1:
+#Sol.1:
+import math
+number = float(input("Enter a number: "))
+square_root = math.sqrt(number)
+print("The square root of {} is {:.2f}".format(number, square_root))
+
+#Sol.2:
+from math import sqrt
+number = float(input("Enter a number: "))
+square_root = sqrt(number)
+print("The square root of {} is {:.2f}".format(number, square_root))
+
+#ex.2:
+from math import pow, sqrt
+ca = int(input("Enter a lenght: "))
+co = int(input("Enter a lenght: "))
+hip = sqrt(pow(ca, 2) + pow(co, 2))
+print("The hipotenuse of triangle of sides {} and {} is {}".format(ca, co, hip))
